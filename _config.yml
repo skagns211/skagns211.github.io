@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "훌륭한 개발자가 되고 싶은 자"
+title                    : "훌륭한 개발자가 되고 싶은 "
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Kim namhun"
@@ -105,7 +105,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "awesome programmer"
   location         : "Republic of Korea"
-  email            :
+  email            : "skagns211@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
