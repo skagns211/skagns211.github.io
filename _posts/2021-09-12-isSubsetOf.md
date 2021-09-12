@@ -1,6 +1,6 @@
 ---
 layout: single
-title: '[Algorithm]'
+title: '[Algorithm] isSubsetOf,두 개의 배열 부분집합 판별'
 ---
 
 두 개의 배열 (base, sample)을 입력받아 sample이 base의 부분집합인지 여부 리턴.
