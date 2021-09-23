@@ -3,13 +3,6 @@ layout: single
 title: "[Algorithm], unpackGiftbox, 재귀"
 ---
 
----
-
-layout: single
-title: "[Algorithm], unpackGiftbox, 재귀"
-
----
-
 선물 상자에 대한 정보를 담은 배열과 문자열을 입력받아 조건에 맞는 선물이 있는지 여부를 리턴.
 
 입력
