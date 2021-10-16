@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "LocalHost 연결 끊기"
+title: "LocalHost 연결 끊기, git 파일 초기화"
 ---
 
 ![](https://images.velog.io/images/skagns211/post/69bcf75d-9c5a-41fe-9180-e3318df7fa08/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-10-15%2023.45.45.png)
@@ -28,3 +28,9 @@ npm run start를 통해 포트를 열려고 시도했는데
 `killall node` 를 입력해 종료해주고,
 
 npm run start로 포트를 열어주면 정상적으로 열리는 것을 확인할 수 있다.
+
+clone해온 git 파일을
+
+처음의 상태로 되돌리는 명령어
+
+`git restore .`
