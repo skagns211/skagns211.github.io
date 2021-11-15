@@ -34,3 +34,5 @@ vsCode 상에서 `command + shift + P` 를 누르고 `format document` 를 입�
 때문에 pretteir를 Default로 설정해줬고,
 
 다른 팀원들과 동일하게 Formatting 되는걸 확인할 수 있었다.
+
+앞으로 문서 Format 설정이 이상하면 기본 formatter를 먼저 살펴보자.
