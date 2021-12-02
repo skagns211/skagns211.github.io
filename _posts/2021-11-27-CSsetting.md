@@ -27,7 +27,7 @@ npm install 해줬다.
 
 .gitignore로 예외 파일들을 설정해줬다.
 
-![스크린샷 2021-12-01 23.05.21.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5bdcd494-82ce-417e-bf0b-5fbafed9f3d7/스크린샷_2021-12-01_23.05.21.png)
+![](https://images.velog.io/images/skagns211/post/a1c556fc-6f30-4074-b6d3-7d4a95ed9043/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-03%2001.14.36.png)
 
 # Server
 
@@ -73,4 +73,4 @@ res.end()를 입력해 Postman에서의 Test가 가능하게 만들었고,
 
 .gitignore 파일을 작성함으로 Server Setting을 끝냈다.
 
-![스크린샷 2021-12-01 23.21.59.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e84827b1-0222-4dd8-b6b0-0c2a440ce221/스크린샷_2021-12-01_23.21.59.png)
+![](https://images.velog.io/images/skagns211/post/958680f2-a70f-48a1-807e-20855603c285/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-12-03%2001.14.58.png)
