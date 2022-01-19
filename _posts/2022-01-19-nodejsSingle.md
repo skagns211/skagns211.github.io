@@ -64,6 +64,52 @@ setTimeout 함수는 비동기로 동작하는 Web API이기 때문에
 
 1 → 4 → 3 → 2 의 순서대로 출력된다.
 
-![스크린샷 2022-01-19 23.49.38.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5db5f6e3-7da0-4aec-a049-e54ad8b72680/스크린샷_2022-01-19_23.49.38.png)
+![](https://images.velog.io/images/skagns211/post/bb9fee90-4588-4c61-a874-3be2ebb5c394/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-20%2000.20.52.png)
 
-가장 먼저 코드가 실행(main)되면서 Stack에 쌓이고,
+가장 먼저 코드가 호출(main)되면서 Stack에 쌓이고, console.log(1)이 다음 Stack으로 쌓이고
+
+실행이 된 뒤 Stack에서 빠지게 된다.
+
+![](https://images.velog.io/images/skagns211/post/93b2df35-9aac-467f-ae01-288532cf0109/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-20%2000.21.08.png)
+
+다음으로 첫번째 setTimeout 함수가 호출되면서 Stack에 쌓이고 실행이 된 뒤 빠지고,
+
+Web API의 작업 영역에 setTimeout 함수를 넘긴 뒤 setTimeout 함수는 대기를 하게 된다.
+
+두번째 setTimeout도 마찬가지로 Stack에 쌓인 뒤 실행되면서 빠지고, Web API에 넘어간다.
+
+![](https://images.velog.io/images/skagns211/post/807455f0-308a-4fb1-9b1d-eaac8415ab7b/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-20%2000.21.28.png)
+
+다음으로 console.log(4)가 호출되면서 Stack에 쌓이고, 실행되면서 빠지고,
+
+main 역시 모든 작업이 끝났기 때문에 실행이 종료되어 Stack에서 빠진다.
+
+현재까지 콘솔에는 1 → 4의 순서대로 찍혀있는 상태이다.
+
+![](https://images.velog.io/images/skagns211/post/9f8f0826-73dd-4b2f-999e-4f0a98b5dd41/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-20%2000.21.44.png)
+
+다음으로, Stack이 비었기 때문에 (Stack이 비어있을 때 Task Queue의 Callback을 Stack으로
+
+push 할 수 있다)
+
+Web API에서 대기중이던 setTimeout 함수들이 실행되어 Task Queue에 순서대로 쌓인 뒤
+
+Stack에 push된다.
+
+![](https://images.velog.io/images/skagns211/post/ffe1cb1c-f792-459d-a404-87252a89d109/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-20%2000.22.04.png)
+
+Task Queue에 쌓여있던 Callback이 Stack에 쌓이고, 실행이 된 후 Stack에서 빠진다.
+
+현재는 1 → 4 → 3 의 순서로 콘솔에 출력된 상태이다.
+
+![](https://images.velog.io/images/skagns211/post/9090b0a5-537e-47b2-ae68-32a411bd04ad/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202022-01-20%2000.22.16.png)
+
+마지막으로, Task Queue에 있던 Callback이 Stack에 쌓이고, 실행이 된 후 Stack에서 빠지면서
+
+최종적으로 콘솔에 1 → 4 → 3 → 2 의 순서로 출력된 후 작업이 종료된다.
+
+지금까지 이벤트 루프에 대해서 알아봤는데, 보다시피 싱글스레드 방식이다.
+
+앞서 말했듯이 Node.js는 비동기 이벤트 처리 라이브러리를 결합했기 때문에,
+
+당연히 “Node.js는 싱글스레드 방식”이다.
