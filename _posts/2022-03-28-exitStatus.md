@@ -3,7 +3,7 @@ layout: single
 title: "window에서 node version 변경시 exit status 1 Err"
 ---
 
-window에서 nvm을 설치 한 뒤에 node까지 설치를 마무리 했고, nvm use로 node를 선택하려 하는데
+window에서 nvm을 설치 한 뒤에 node까지 설치를 마무리 했고, nvm use로 node를 선택하려 하는데,
 
 `exit status 1` 과 함께 외계어가 출력됐다.
 
